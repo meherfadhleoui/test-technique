@@ -1,0 +1,12 @@
+.container {
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    font-weight: 700;
+    font-size: larger;
+  }
+}

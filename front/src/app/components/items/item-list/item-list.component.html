@@ -1,0 +1,5 @@
+<a routerLink="/add-item" class="link">Ajouter un nouvel item </a>
+
+<div class="items-container">
+  <app-item *ngFor="let item of items" [item]="item"></app-item>
+</div>

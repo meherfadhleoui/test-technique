@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    margin: auto;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}

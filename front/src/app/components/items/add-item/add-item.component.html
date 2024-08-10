@@ -1,0 +1,29 @@
+<form [formGroup]="addItemForm" class="shadow">
+  <div class="header">
+    <h3>Ajout d'un nouvel item</h3>
+    <a routerLink="/">Naviguer vers la liste des items</a>
+  </div>
+
+  <label for="name"> Nom </label>
+  <input id="name" type="text" formControlName="name" />
+  <app-error
+    *ngIf="addItemForm.get('name')?.touched && addItemForm.get('name')?.invalid"
+    message="Ce champ est obligatoire"
+  />
+
+  <br />
+  <br />
+  <label for="description"> Description </label>
+  <textarea id="description" formControlName="description"></textarea>
+  <app-error
+    *ngIf="
+      addItemForm.get('description')?.touched &&
+      addItemForm.get('description')?.invalid
+    "
+    message="Ce champ est obligatoire"
+  />
+  <br />
+  <br />
+
+  <button (click)="addItem()" [disabled]="isLoading">Ajout item</button>
+</form>
